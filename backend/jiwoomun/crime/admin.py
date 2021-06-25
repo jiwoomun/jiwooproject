@@ -37,9 +37,9 @@ setup(
     scripts=['manage.py'],
     entry_points={
         'console_scripts': [
-            'publish = admin.common.script:main',
-            'scan = admin.crime.script:main',
-            'update = admin.gas_station.script:main',
+            'publish = jiwoomun.common.script:main',
+            'scan = jiwoomun.crime.script:main',
+            'update = jiwoomun.gas_station.script:main',
             ],
         },
     )

@@ -6,6 +6,7 @@ from selenium import webdriver
 
 from abc import *
 
+from dataclasses import dataclass
 
 class PrinterBase(metaclass=ABCMeta):
     @abstractmethod
@@ -54,7 +55,8 @@ class Reader(ReaderBase):
     def xls(self, file, header, usecols) -> object:
         return pd.read_excel(f'{self.new_file(file)}.xls', header=header, usecols=usecols)
 
-
+    def csv_header(self, file, header) -> object:
+        return pd.read_csv(f'{self.new_file(file)}.csv', encoding='UTF-8', thousands=',', header='header')
 
     def json(self, file) -> object:
         return json.load(open(f'{self.new_file(file)}.json', encoding='UTF-8'))
@@ -62,7 +64,7 @@ class Reader(ReaderBase):
     def gmaps(self) -> object:
         return googlemaps.Client(key='')
 
-class Scraper(ScraperBase):
+class Scraper():
 
     def driver(self) -> object:
         return webdriver.Chrome('C:/Program Files/Google/Chrome/chromedriver')
@@ -71,7 +73,8 @@ class Scraper(ScraperBase):
         pass
 
 
-from dataclasses import dataclass
+
+
 
 @dataclass
 class FileDTO(object):
