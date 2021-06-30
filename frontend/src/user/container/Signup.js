@@ -23,9 +23,18 @@ const SignUp = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    let handleErrors = response => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    }
     alert(`전송 클릭: ${JSON.stringify({...userInfo})}`)
-    const signupRequest = {...userInfo}
-    userSignup(signupRequest)
+    
+    userSignup({...userInfo})
+    //const signupRequest = {...userInfo}
+    //userSignup(signupRequest)
+
     .then(res => {
       alert(`회원가입 완료 : ${res.data.result}`)
       //history.push('login')
@@ -35,7 +44,8 @@ const SignUp = () => {
     })
   }
 
-  
+
+
   const handleClick = e => {
     e.preventDefault()
     alert('취소 클릭')
