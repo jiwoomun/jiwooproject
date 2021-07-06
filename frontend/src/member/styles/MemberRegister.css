@@ -1,4 +1,4 @@
-.Signup body {font-family: Arial, Helvetica, sans-serif;}
+.MemberRegister body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
 /* Full-width input fields 
@@ -11,18 +11,18 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }*/
 
-.Signup input[type=text]:focus, input[type=password]:focus {
+.MemberRegister input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-.Signup hr {
+.MemberRegister hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
 /* Set a style for all buttons */
-.Signup button {
+.MemberRegister button {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -33,37 +33,37 @@ input[type=text], input[type=password] {
   opacity: 0.9;
 }
 
-.Signup button:hover {
+.MemberRegister button:hover {
   opacity:1;
 }
 
 /* Extra styles for the cancel button */
-.Signup .cancelbtn {
+.MemberRegister .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.Signup .cancelbtn, .signupbtn {
+/* Float cancel and MemberRegister buttons and add an equal width */
+.MemberRegister .cancelbtn, .MemberRegisterbtn {
   float: left;
   width: 50%;
 }
 
 /* Add padding to container elements */
-.Signup .container {
+.MemberRegister .container {
   padding: 16px;
 }
 
 /* Clear floats */
-.Signup .clearfix::after {
+.MemberRegister .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
+/* Change styles for cancel button and MemberRegister button on extra small screens */
 @media screen and (max-width: 300px) {
-.cancelbtn, .signupbtn {
+.cancelbtn, .MemberRegisterbtn {
      width: 100%;
   }
 }
